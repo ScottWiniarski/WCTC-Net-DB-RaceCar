@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RaceTrack.RaceTrack.Cars
 {
-    public class Tractor : RaceCar
+    internal class Oppressor : RaceCar
     {
-        public Tractor()
+        public Oppressor()
         {
-            Name = "Tractor";
-            TopSpeed = 20;
+            Name = "Oppressor";
+            TopSpeed = 86;
         }
 
         public override void StartEngine()
         {
-            Console.WriteLine($"The {Name} struggles to start");
+            Console.WriteLine($"The {Name} rumbles awake!");
         }
-
         public override void StopEngine()
         {
-            Console.WriteLine($"The {Name} is worn out, gratefully coming to a end.");
+            Console.WriteLine($"The {Name} kills its non-factory issue motor.");
         }
 
         public override void Brake()
         {
-            Console.WriteLine($"The {Name} is having a hard time stopping!");
+            Console.WriteLine($"The {Name}'s brakes are working overtime!");
             base.Brake();
         }
     }
